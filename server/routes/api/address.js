@@ -50,7 +50,7 @@ router.get('/:id', async (req, res) => {
     const addressDoc = await Address.findOne({ _id: addressId });
 
     if (!addressDoc) {
-      res.status(404).json({
+      return res.status(404).json({
         message: `Cannot find Address with the id: ${addressId}.`
       });
     }
@@ -70,6 +70,8 @@ router.put('/:id', async (req, res) => {
     const addressId = req.params.id;
     const update = req.body;
     const query = { _id: addressId };
+
+    // update.isDefault = true;
 
     await Address.findOneAndUpdate(query, update, {
       new: true

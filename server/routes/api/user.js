@@ -47,7 +47,7 @@ router.get('/', auth, async (req, res) => {
       .skip((page - 1) * limit)
       .exec();
 
-    const count = await User.countDocuments();
+    const count = 1;//await User.countDocuments();
 
     res.status(200).json({
       users,

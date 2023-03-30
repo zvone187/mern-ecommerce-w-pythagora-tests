@@ -11,6 +11,7 @@ router.post('/add', auth, async (req, res) => {
   try {
     const user = req.user;
 
+    req.body.isRecommended = !!req.body.isRecommended;
     const review = new Review({
       ...req.body,
       user: user._id

@@ -62,6 +62,7 @@
     "passport-facebook": "^3.0.0",
     "passport-google-oauth2": "^0.2.0",
     "passport-jwt": "^4.0.0",
+    "pythagora": "^0.0.33",
     "rc-slider": "^9.7.2",
     "react": "^16.8.6",
     "react-autosuggest": "^10.1.0",
